@@ -1,0 +1,10 @@
+{
+  "@@locale": "es",
+  "scanCta": "Escanear un coche",
+  "garageTitle": "Garaje",
+  "searchHint": "Buscar marca o modelo",
+  "scanFailedFallback": "No he podido identificar el coche. Búscalo a mano.",
+  "noCarFound": "No he encontrado un coche.",
+  "saveToCloud": "Guardar en la nube",
+  "searchNoResults": "No está en el catálogo. Puedes añadirlo."
+}

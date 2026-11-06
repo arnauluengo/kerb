@@ -1,0 +1,10 @@
+{
+  "@@locale": "en",
+  "scanCta": "Scan a car",
+  "garageTitle": "Garage",
+  "searchHint": "Search make or model",
+  "scanFailedFallback": "I couldn't identify the car. Search manually.",
+  "noCarFound": "I couldn't find a car.",
+  "saveToCloud": "Save to the cloud",
+  "searchNoResults": "Not in the catalog. You can add it."
+}

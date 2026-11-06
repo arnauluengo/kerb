@@ -1,0 +1,121 @@
+{
+  "_comment": "Rareza curada a mano. La fórmula de build_catalog.mjs solo sugiere; aquí decide un humano. Cada grupo lleva su motivo.",
+  "groups": [
+    {
+      "tier": "legendary",
+      "reason": "Hipercoches y clásicos inalcanzables: menos de ~1.500 unidades o precio de subasta de siete cifras.",
+      "ids": [
+        "ferrari-250-gto-1962",
+        "ferrari-f40-1987",
+        "ferrari-laferrari-2013",
+        "mclaren-f1-1992",
+        "mclaren-p1-2013",
+        "bugatti-veyron-2005",
+        "bugatti-chiron-2016",
+        "pagani-zonda-c12-1999",
+        "pagani-huayra-2012",
+        "koenigsegg-agera-rs-2015",
+        "aston-martin-valkyrie-2021",
+        "rimac-nevera-2021",
+        "porsche-959-1986",
+        "porsche-carrera-gt-2004",
+        "jaguar-xj220-1992",
+        "lamborghini-miura-p400-1966",
+        "lamborghini-countach-lp400-1974",
+        "alfa-romeo-33-stradale-1967",
+        "mercedes-300-sl-gullwing-1954"
+      ]
+    },
+    {
+      "tier": "epic",
+      "reason": "Iconos de competición y ediciones limitadas con demanda real de coleccionista.",
+      "ids": [
+        "porsche-911-carrera-rs-27-1973",
+        "porsche-911-gt3-rs-992-2022",
+        "porsche-911-turbo-930-1975",
+        "mercedes-190e-evo-ii-1990",
+        "mercedes-amg-gt-black-series-2020",
+        "bmw-m3-e30-1986",
+        "bmw-2002-turbo-1973",
+        "bmw-m5-e28-1985",
+        "audi-sport-quattro-1984",
+        "lancia-stratos-hf-1973",
+        "lancia-delta-integrale-evo-ii-1993",
+        "subaru-impreza-22b-1998",
+        "mitsubishi-lancer-evo-vi-tme-1999",
+        "renault-5-turbo-1980",
+        "renault-clio-williams-1993",
+        "peugeot-205-gti-19-1986",
+        "volkswagen-golf-gti-mk1-1976",
+        "ford-escort-rs-cosworth-1992",
+        "jaguar-e-type-series-1-1961",
+        "aston-martin-db5-1963",
+        "dodge-charger-rt-1969",
+        "chevrolet-corvette-c2-stingray-1963",
+        "ford-gt-2017"
+      ]
+    },
+    {
+      "tier": "very_rare",
+      "reason": "Deportivos de tirada corta, superdeportivos actuales y mitos de internet.",
+      "ids": [
+        "mclaren-720s-2017",
+        "ferrari-488-gtb-2015",
+        "lamborghini-huracan-lp610-2014",
+        "lamborghini-aventador-lp700-2011",
+        "porsche-911-gt3-991-2013",
+        "audi-r8-v10-plus-2015",
+        "nissan-gt-r-r35-2007",
+        "nissan-skyline-gt-r-r34-1999",
+        "honda-nsx-na1-1990",
+        "toyota-supra-a80-1993",
+        "mazda-rx-7-fd-1992",
+        "alfa-romeo-giulia-quadrifoglio-2016",
+        "ford-mustang-shelby-gt500-2020",
+        "chevrolet-corvette-c8-z06-2023",
+        "ford-f150-raptor-r-2023",
+        "mercedes-g63-amg-2018",
+        "bmw-m3-g80-2021",
+        "audi-rs6-avant-c8-2019",
+        "tesla-model-s-plaid-2021",
+        "alpine-a110-2017",
+        "toyota-supra-a90-2019",
+        "honda-civic-type-r-fk8-2017"
+      ]
+    },
+    {
+      "tier": "rare",
+      "reason": "Deportivos accesibles, clásicos populares con tirón y coches con carácter.",
+      "ids": [
+        "bmw-m3-e46-2000",
+        "aston-martin-v8-vantage-2005",
+        "jaguar-f-type-r-2014",
+        "volkswagen-golf-r-mk8-2021",
+        "renault-megane-rs-trophy-2018",
+        "toyota-land-cruiser-70-1984",
+        "volkswagen-golf-gti-mk2-1984",
+        "mazda-mx-5-na-1989",
+        "mini-cooper-s-1963",
+        "citroen-ds-19-1955"
+      ]
+    },
+    {
+      "tier": "uncommon",
+      "reason": "Coches populares que ya no se ven a diario y empiezan a cotizar.",
+      "ids": [
+        "ford-model-t-1908",
+        "volkswagen-beetle-1938",
+        "fiat-500-1957",
+        "citroen-2cv-1948",
+        "seat-600-1957"
+      ]
+    },
+    {
+      "tier": "common",
+      "reason": "Coches corrientes de calle. Son la mayoría del catálogo y deben serlo.",
+      "ids": [
+        "seat-ibiza-fr-2017"
+      ]
+    }
+  ]
+}

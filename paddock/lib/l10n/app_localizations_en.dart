@@ -64,4 +64,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get filterAll => 'ALL';
+
+  @override
+  String get searchTitle => 'Search';
+
+  @override
+  String get addManually => 'Add manually';
 }

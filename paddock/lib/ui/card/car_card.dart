@@ -1,13 +1,12 @@
-import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
 import 'package:paddock/design/tokens.dart';
 import 'package:paddock/domain/car.dart';
 import 'package:paddock/domain/money.dart';
 import 'package:paddock/domain/rarity.dart';
 import 'package:paddock/l10n/app_localizations.dart';
+import 'package:paddock/ui/card/car_silhouette.dart';
 
-/// La carta de colección. Composición cerrada en la spec §11.
+/// La carta de colecciÃ³n. ComposiciÃ³n cerrada en la spec Â§11.
 class CarCard extends StatelessWidget {
   const CarCard({
     super.key,
@@ -22,7 +21,7 @@ class CarCard extends StatelessWidget {
   final Currency currency;
   final double width;
 
-  /// Posición 0-based en el catálogo. Si es null, no se dibuja el contador.
+  /// PosiciÃ³n 0-based en el catÃ¡logo. Si es null, no se dibuja el contador.
   final int? catalogIndex;
   final int? catalogTotal;
 
@@ -164,7 +163,7 @@ class CarCard extends StatelessWidget {
       if (car.powerHp != null) '${car.powerHp} CV',
       if (car.topSpeedKmh != null) '${car.topSpeedKmh} km/h',
     ];
-    return parts.join('  ·  ');
+    return parts.join('  Â·  ');
   }
 
   static String _rarityLabel(AppLocalizations l, RarityTier tier) => switch (tier) {
@@ -237,7 +236,7 @@ class _RenderArea extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        // Halo de rareza detrás del coche.
+        // Halo de rareza detrÃ¡s del coche.
         Container(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
@@ -250,7 +249,7 @@ class _RenderArea extends StatelessWidget {
           Image.network(
             car.renderPath!,
             fit: BoxFit.contain,
-            errorBuilder: (_, __, ___) => _placeholder(context),
+            errorBuilder: (_, _, _) => _placeholder(context),
           )
         else
           _placeholder(context),
@@ -265,10 +264,7 @@ class _RenderArea extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(
-          child: CustomPaint(
-            painter: _CarSilhouettePainter(color: accent.withValues(alpha: 0.38)),
-            size: Size.infinite,
-          ),
+          child: CarSilhouette(color: accent.withValues(alpha: 0.38)),
         ),
         const SizedBox(height: 6),
         Text(
@@ -283,42 +279,4 @@ class _RenderArea extends StatelessWidget {
       ],
     );
   }
-}
-
-/// Silueta de perfil bajo, dibujada a mano. Es un marcador de posición: cuando
-/// el lote de renders exista, esto no se ve nunca.
-class _CarSilhouettePainter extends CustomPainter {
-  const _CarSilhouettePainter({required this.color});
-
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final w = size.width;
-    final h = size.height;
-    if (w <= 0 || h <= 0) return;
-
-    final body = Path()
-      ..moveTo(w * 0.04, h * 0.70)
-      ..cubicTo(w * 0.04, h * 0.58, w * 0.10, h * 0.54, w * 0.20, h * 0.53)
-      ..lineTo(w * 0.33, h * 0.51)
-      ..cubicTo(w * 0.41, h * 0.30, w * 0.50, h * 0.23, w * 0.60, h * 0.25)
-      ..cubicTo(w * 0.70, h * 0.27, w * 0.77, h * 0.38, w * 0.83, h * 0.49)
-      ..lineTo(w * 0.93, h * 0.53)
-      ..cubicTo(w * 0.97, h * 0.55, w * 0.98, h * 0.62, w * 0.98, h * 0.70)
-      ..lineTo(w * 0.04, h * 0.70)
-      ..close();
-
-    canvas.saveLayer(Offset.zero & size, Paint());
-    canvas.drawPath(body, Paint()..color = color);
-
-    final cut = Paint()..blendMode = ui.BlendMode.clear;
-    canvas.drawCircle(Offset(w * 0.25, h * 0.70), h * 0.13, cut);
-    canvas.drawCircle(Offset(w * 0.77, h * 0.70), h * 0.13, cut);
-    canvas.restore();
-  }
-
-  @override
-  bool shouldRepaint(_CarSilhouettePainter oldDelegate) =>
-      oldDelegate.color != color;
 }

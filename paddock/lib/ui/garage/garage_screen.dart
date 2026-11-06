@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paddock/data/garage_repository.dart';
 import 'package:paddock/design/tokens.dart';
-import 'package:paddock/domain/car.dart';
 import 'package:paddock/domain/money.dart';
 import 'package:paddock/domain/rarity.dart';
 import 'package:paddock/l10n/app_localizations.dart';
@@ -12,10 +11,15 @@ class GarageScreen extends StatefulWidget {
     super.key,
     required this.repository,
     this.currency = Currency.eur,
+    this.onAddCar,
   });
 
   final GarageRepository repository;
   final Currency currency;
+
+  /// Abre el flujo de añadir coche. Hoy lleva al buscador; cuando exista el
+  /// escáner, llevará a la cámara.
+  final VoidCallback? onAddCar;
 
   @override
   State<GarageScreen> createState() => _GarageScreenState();
@@ -44,6 +48,14 @@ class _GarageScreenState extends State<GarageScreen> {
 
     return Scaffold(
       backgroundColor: kBg,
+      floatingActionButton: entries.isEmpty
+          ? null
+          : FloatingActionButton(
+              onPressed: widget.onAddCar,
+              backgroundColor: kGold,
+              foregroundColor: kBg,
+              child: const Icon(Icons.add),
+            ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -106,7 +118,7 @@ class _GarageScreenState extends State<GarageScreen> {
             ],
             Expanded(
               child: entries.isEmpty
-                  ? _EmptyGarage(l: l)
+                  ? _EmptyGarage(l: l, onScan: widget.onAddCar)
                   : GridView.builder(
                       padding: const EdgeInsets.fromLTRB(
                         Space.xl,
@@ -149,9 +161,10 @@ class _GarageScreenState extends State<GarageScreen> {
 }
 
 class _EmptyGarage extends StatelessWidget {
-  const _EmptyGarage({required this.l});
+  const _EmptyGarage({required this.l, this.onScan});
 
   final AppLocalizations l;
+  final VoidCallback? onScan;
 
   @override
   Widget build(BuildContext context) {
@@ -191,7 +204,7 @@ class _EmptyGarage extends StatelessWidget {
             ),
             const SizedBox(height: Space.xl),
             FilledButton.icon(
-              onPressed: () {},
+              onPressed: onScan,
               style: FilledButton.styleFrom(
                 backgroundColor: kGold,
                 foregroundColor: kBg,

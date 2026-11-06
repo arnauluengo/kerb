@@ -4,7 +4,7 @@ import 'package:paddock/data/catalog.dart';
 import 'package:paddock/data/garage_repository.dart';
 import 'package:paddock/design/tokens.dart';
 import 'package:paddock/l10n/app_localizations.dart';
-import 'package:paddock/ui/garage/garage_screen.dart';
+import 'package:paddock/ui/shell/app_shell.dart';
 
 void main() => runApp(const PaddockApp());
 
@@ -36,7 +36,18 @@ class PaddockApp extends StatelessWidget {
           surface: kSurface,
         ),
       ),
-      home: repo == null ? const _BootHome() : GarageScreen(repository: repo),
+      // En el navegador de escritorio la app se dibuja como un móvil. En un
+      // teléfono real este límite no se alcanza nunca.
+      builder: (context, child) => ColoredBox(
+        color: kBg,
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 430),
+            child: child!,
+          ),
+        ),
+      ),
+      home: repo == null ? const _BootHome() : AppShell(repository: repo),
     );
   }
 }
@@ -76,6 +87,6 @@ class _BootHomeState extends State<_BootHome> {
         body: Center(child: CircularProgressIndicator(color: kGold)),
       );
     }
-    return GarageScreen(repository: repo);
+    return AppShell(repository: repo);
   }
 }

@@ -17,5 +17,7 @@
   "rarityLegendary": "LEGENDARY",
   "garageEmptyTitle": "Your garage is empty",
   "garageEmptyBody": "Photograph a car you see on the street and your collection begins.",
-  "filterAll": "ALL"
+  "filterAll": "ALL",
+  "searchTitle": "Search",
+  "addManually": "Add manually"
 }

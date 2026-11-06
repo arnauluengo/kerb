@@ -30,4 +30,38 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get searchNoResults => 'No está en el catálogo. Puedes añadirlo.';
+
+  @override
+  String get marketValue => 'Valor de mercado';
+
+  @override
+  String get noRender => 'Sin render todavía';
+
+  @override
+  String get rarityCommon => 'COMÚN';
+
+  @override
+  String get rarityUncommon => 'POCO COMÚN';
+
+  @override
+  String get rarityRare => 'RARO';
+
+  @override
+  String get rarityVeryRare => 'MUY RARO';
+
+  @override
+  String get rarityEpic => 'ÉPICO';
+
+  @override
+  String get rarityLegendary => 'LEGENDARIO';
+
+  @override
+  String get garageEmptyTitle => 'Tu garaje está vacío';
+
+  @override
+  String get garageEmptyBody =>
+      'Haz una foto a un coche que veas por la calle y empezará tu colección.';
+
+  @override
+  String get filterAll => 'TODAS';
 }

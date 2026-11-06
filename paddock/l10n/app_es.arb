@@ -6,5 +6,16 @@
   "scanFailedFallback": "No he podido identificar el coche. Búscalo a mano.",
   "noCarFound": "No he encontrado un coche.",
   "saveToCloud": "Guardar en la nube",
-  "searchNoResults": "No está en el catálogo. Puedes añadirlo."
+  "searchNoResults": "No está en el catálogo. Puedes añadirlo.",
+  "marketValue": "Valor de mercado",
+  "noRender": "Sin render todavía",
+  "rarityCommon": "COMÚN",
+  "rarityUncommon": "POCO COMÚN",
+  "rarityRare": "RARO",
+  "rarityVeryRare": "MUY RARO",
+  "rarityEpic": "ÉPICO",
+  "rarityLegendary": "LEGENDARIO",
+  "garageEmptyTitle": "Tu garaje está vacío",
+  "garageEmptyBody": "Haz una foto a un coche que veas por la calle y empezará tu colección.",
+  "filterAll": "TODAS"
 }

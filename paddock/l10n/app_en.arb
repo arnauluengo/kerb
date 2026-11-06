@@ -6,5 +6,16 @@
   "scanFailedFallback": "I couldn't identify the car. Search manually.",
   "noCarFound": "I couldn't find a car.",
   "saveToCloud": "Save to the cloud",
-  "searchNoResults": "Not in the catalog. You can add it."
+  "searchNoResults": "Not in the catalog. You can add it.",
+  "marketValue": "Market value",
+  "noRender": "No render yet",
+  "rarityCommon": "COMMON",
+  "rarityUncommon": "UNCOMMON",
+  "rarityRare": "RARE",
+  "rarityVeryRare": "VERY RARE",
+  "rarityEpic": "EPIC",
+  "rarityLegendary": "LEGENDARY",
+  "garageEmptyTitle": "Your garage is empty",
+  "garageEmptyBody": "Photograph a car you see on the street and your collection begins.",
+  "filterAll": "ALL"
 }

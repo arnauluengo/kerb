@@ -139,6 +139,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Not in the catalog. You can add it.'**
   String get searchNoResults;
+
+  /// No description provided for @marketValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Market value'**
+  String get marketValue;
+
+  /// No description provided for @noRender.
+  ///
+  /// In en, this message translates to:
+  /// **'No render yet'**
+  String get noRender;
+
+  /// No description provided for @rarityCommon.
+  ///
+  /// In en, this message translates to:
+  /// **'COMMON'**
+  String get rarityCommon;
+
+  /// No description provided for @rarityUncommon.
+  ///
+  /// In en, this message translates to:
+  /// **'UNCOMMON'**
+  String get rarityUncommon;
+
+  /// No description provided for @rarityRare.
+  ///
+  /// In en, this message translates to:
+  /// **'RARE'**
+  String get rarityRare;
+
+  /// No description provided for @rarityVeryRare.
+  ///
+  /// In en, this message translates to:
+  /// **'VERY RARE'**
+  String get rarityVeryRare;
+
+  /// No description provided for @rarityEpic.
+  ///
+  /// In en, this message translates to:
+  /// **'EPIC'**
+  String get rarityEpic;
+
+  /// No description provided for @rarityLegendary.
+  ///
+  /// In en, this message translates to:
+  /// **'LEGENDARY'**
+  String get rarityLegendary;
+
+  /// No description provided for @garageEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your garage is empty'**
+  String get garageEmptyTitle;
+
+  /// No description provided for @garageEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Photograph a car you see on the street and your collection begins.'**
+  String get garageEmptyBody;
+
+  /// No description provided for @filterAll.
+  ///
+  /// In en, this message translates to:
+  /// **'ALL'**
+  String get filterAll;
 }
 
 class _AppLocalizationsDelegate

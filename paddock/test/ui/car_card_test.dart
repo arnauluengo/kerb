@@ -59,4 +59,20 @@ void main() {
 
     expect(find.text('001 / 080'), findsOneWidget);
   });
+
+  testWidgets('la carta aguanta el ancho de una celda de rejilla sin desbordar',
+      (tester) async {
+    await tester.pumpWidget(
+      _wrap(CarCard(
+        car: f40,
+        currency: Currency.eur,
+        width: 150,
+        catalogIndex: 0,
+        catalogTotal: 80,
+      )),
+    );
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+  });
 }

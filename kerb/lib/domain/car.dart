@@ -1,11 +1,11 @@
 import 'package:kerb/domain/rarity.dart';
 
 const Map<String, RarityTier> _tierFromJson = <String, RarityTier>{
-  'common': RarityTier.common,
   'uncommon': RarityTier.uncommon,
   'rare': RarityTier.rare,
   'very_rare': RarityTier.veryRare,
   'epic': RarityTier.epic,
+  'mythic': RarityTier.mythic,
   'legendary': RarityTier.legendary,
 };
 
@@ -28,8 +28,6 @@ class Car {
     this.engine,
     this.productionUnits,
     this.marketPriceEur,
-    this.renderPath,
-    this.depthPath,
   });
 
   final String id;
@@ -47,8 +45,6 @@ class Car {
   final num? marketPriceEur;
   final double rarityScore;
   final RarityTier rarity;
-  final String? renderPath;
-  final String? depthPath;
 
   /// Nombre completo para la carta: `911 GT3 RS 992`.
   String get fullName => generation == null ? model : '$model $generation';
@@ -75,8 +71,6 @@ class Car {
       marketPriceEur: json['market_price_eur'] as num?,
       rarityScore: (json['rarity_score'] as num).toDouble(),
       rarity: tier,
-      renderPath: json['render_path'] as String?,
-      depthPath: json['depth_path'] as String?,
     );
   }
 }

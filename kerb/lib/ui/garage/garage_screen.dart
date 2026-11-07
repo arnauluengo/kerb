@@ -271,11 +271,11 @@ class _RarityFilter extends StatelessWidget {
   }
 
   static String _label(AppLocalizations l, RarityTier tier) => switch (tier) {
-        RarityTier.common => l.rarityCommon,
         RarityTier.uncommon => l.rarityUncommon,
         RarityTier.rare => l.rarityRare,
         RarityTier.veryRare => l.rarityVeryRare,
         RarityTier.epic => l.rarityEpic,
+        RarityTier.mythic => l.rarityMythic,
         RarityTier.legendary => l.rarityLegendary,
       };
 }

@@ -13,7 +13,16 @@ class AppLocalizationsEs extends AppLocalizations {
   String get scanCta => 'Escanear un coche';
 
   @override
+  String get scan => 'Escanear';
+
+  @override
   String get garageTitle => 'Garaje';
+
+  @override
+  String get searchTitle => 'Buscar';
+
+  @override
+  String get profileTitle => 'Perfil';
 
   @override
   String get searchHint => 'Buscar marca o modelo';
@@ -35,10 +44,53 @@ class AppLocalizationsEs extends AppLocalizations {
   String get marketValue => 'Valor de mercado';
 
   @override
-  String get noRender => 'Sin render todavía';
+  String get notSpotted => 'Sin avistar';
 
   @override
-  String get rarityCommon => 'COMÚN';
+  String get collection => 'Colección';
+
+  @override
+  String get totalValue => 'Valor total';
+
+  @override
+  String get cars => 'Coches';
+
+  @override
+  String get sightings => 'Avistamientos';
+
+  @override
+  String get catalogProgress => 'Del catálogo';
+
+  @override
+  String get rarityTitle => 'Rareza';
+
+  @override
+  String get account => 'Cuenta';
+
+  @override
+  String get currencyLabel => 'Moneda';
+
+  @override
+  String get ageLabel => 'Edad';
+
+  @override
+  String get settingsTitle => 'Ajustes';
+
+  @override
+  String get donate => 'Apoyar Kerb';
+
+  @override
+  String get donateBody =>
+      'Kerb es gratis y sin anuncios. Si te gusta, invítame a un café.';
+
+  @override
+  String get memberSince => 'Miembro desde';
+
+  @override
+  String get searchEmptyTitle => 'Busca entre 500 coches';
+
+  @override
+  String get searchEmptyBody => 'Marca, modelo o año. Funciona sin conexión.';
 
   @override
   String get rarityUncommon => 'POCO COMÚN';
@@ -53,6 +105,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get rarityEpic => 'ÉPICO';
 
   @override
+  String get rarityMythic => 'MÍTICO';
+
+  @override
   String get rarityLegendary => 'LEGENDARIO';
 
   @override
@@ -63,10 +118,7 @@ class AppLocalizationsEs extends AppLocalizations {
       'Haz una foto a un coche que veas por la calle y empezará tu colección.';
 
   @override
-  String get filterAll => 'TODAS';
-
-  @override
-  String get searchTitle => 'Buscar';
+  String get filterAll => 'Todas';
 
   @override
   String get addManually => 'Añadir a mano';

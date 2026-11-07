@@ -40,7 +40,7 @@ void main() {
 
     expect(find.byKey(const Key('card-price')), findsNothing);
     expect(find.textContaining('null'), findsNothing);
-    expect(find.text('COMÚN'), findsOneWidget);
+    expect(find.text('POCO COMÚN'), findsOneWidget);
   });
 
   testWidgets('la carta sin render no rompe y lo dice', (tester) async {

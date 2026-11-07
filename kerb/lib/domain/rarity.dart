@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
 
-/// Tiers de rareza, de más común a más raro.
-enum RarityTier { common, uncommon, rare, veryRare, epic, legendary }
+/// Tiers de rareza, de menos a más raro.
+///
+/// No existe `common`: el catálogo solo admite deportivos, exóticos y clásicos,
+/// así que la escala empieza en "poco común".
+enum RarityTier { uncommon, rare, veryRare, epic, mythic, legendary }
 
-/// Cortes de la spec §13: 20 / 40 / 60 / 75 / 90.
-RarityTier rarityFromScore(double score) {
-  if (score < 20) return RarityTier.common;
-  if (score < 40) return RarityTier.uncommon;
-  if (score < 60) return RarityTier.rare;
-  if (score < 75) return RarityTier.veryRare;
-  if (score < 90) return RarityTier.epic;
+/// Traduce un percentil del catálogo (0–1) a su tier.
+///
+/// Los cortes son por percentil, no por puntuación absoluta: con un catálogo
+/// sin coches comunes, los cortes absolutos aplastarían todo hacia arriba.
+RarityTier rarityFromPercentile(double percentile) {
+  if (percentile < 0.30) return RarityTier.uncommon;
+  if (percentile < 0.55) return RarityTier.rare;
+  if (percentile < 0.75) return RarityTier.veryRare;
+  if (percentile < 0.90) return RarityTier.epic;
+  if (percentile < 0.97) return RarityTier.mythic;
   return RarityTier.legendary;
 }
 
 const Map<RarityTier, Color> _rarityColors = <RarityTier, Color>{
-  RarityTier.common: Color(0xFF4ADE80),
   RarityTier.uncommon: Color(0xFF2DD4BF),
   RarityTier.rare: Color(0xFF3B82F6),
   RarityTier.veryRare: Color(0xFF8B5CF6),
   RarityTier.epic: Color(0xFFEC4899),
+  RarityTier.mythic: Color(0xFFE0533B),
   RarityTier.legendary: Color(0xFFF5B942),
 };
 

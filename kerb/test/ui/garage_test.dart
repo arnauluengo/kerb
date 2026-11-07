@@ -27,10 +27,9 @@ void main() {
   test('el valor total suma solo coches con precio', () async {
     final repo = GarageRepository(catalog: catalog);
     await repo.add('ferrari-f40-1987');
-    await repo.add('seat-ibiza-fr-2017');
     await repo.add('no-existe');
 
-    expect(repo.totalValueEur(), 1218000);
+    expect(repo.totalValueEur(), 1200000);
   });
 
   test('volver a ver el mismo coche no duplica la carta', () async {

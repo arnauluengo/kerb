@@ -53,25 +53,33 @@ function rarity(car) {
   return (weighted / totalWeight) * 100;
 }
 
-function tier(score) {
-  if (score < 20) return 'common';
-  if (score < 40) return 'uncommon';
-  if (score < 60) return 'rare';
-  if (score < 75) return 'very_rare';
-  if (score < 90) return 'epic';
+// Cortes por percentil del catálogo (spec §16), nunca por puntuación absoluta:
+// sin coches comunes, los cortes absolutos aplastarían todo hacia arriba.
+function tierFromPercentile(p) {
+  if (p < 0.30) return 'uncommon';
+  if (p < 0.55) return 'rare';
+  if (p < 0.75) return 'very_rare';
+  if (p < 0.90) return 'epic';
+  if (p < 0.97) return 'mythic';
   return 'legendary';
 }
 
+const scores = raw.map((c) => rarity(c)).sort((a, b) => a - b);
+const scorePercentile = (score) => {
+  if (!scores.length) return 0;
+  const below = scores.filter((x) => x < score).length;
+  return scores.length === 1 ? 1 : below / (scores.length - 1);
+};
+
 const out = raw.map((car) => {
-  const score = Number(rarity(car).toFixed(2));
+  const rawScore = rarity(car);
+  const score = Number(rawScore.toFixed(2));
   const curatedTier = curated.get(car.id);
   return {
     ...car,
     rarity_score: score,
-    rarity_tier: curatedTier ?? tier(score),
+    rarity_tier: curatedTier ?? tierFromPercentile(scorePercentile(rawScore)),
     rarity_source: curatedTier ? 'curated' : 'formula',
-    render_path: null,
-    depth_path: null,
   };
 });
 

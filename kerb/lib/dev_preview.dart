@@ -15,7 +15,7 @@ const _demoCars = <String>[
   'bmw-m3-e30-1986',
   'mercedes-190e-evo-ii-1990',
   'subaru-impreza-22b-1998',
-  'seat-ibiza-fr-2017',
+  'alfa-romeo-giulia-quadrifoglio-2016',
   'mazda-mx-5-na-1989',
 ];
 

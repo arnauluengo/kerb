@@ -27,5 +27,5 @@ const carSinPrecio = Car(
   powerHp: 150,
   topSpeedKmh: 215,
   rarityScore: 12,
-  rarity: RarityTier.common,
+  rarity: RarityTier.uncommon,
 );

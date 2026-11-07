@@ -109,13 +109,6 @@
         "citroen-2cv-1948",
         "seat-600-1957"
       ]
-    },
-    {
-      "tier": "common",
-      "reason": "Coches corrientes de calle. Son la mayoría del catálogo y deben serlo.",
-      "ids": [
-        "seat-ibiza-fr-2017"
-      ]
     }
   ]
 }

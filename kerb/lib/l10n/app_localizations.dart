@@ -104,11 +104,29 @@ abstract class AppLocalizations {
   /// **'Scan a car'**
   String get scanCta;
 
+  /// No description provided for @scan.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan'**
+  String get scan;
+
   /// No description provided for @garageTitle.
   ///
   /// In en, this message translates to:
   /// **'Garage'**
   String get garageTitle;
+
+  /// No description provided for @searchTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get searchTitle;
+
+  /// No description provided for @profileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profileTitle;
 
   /// No description provided for @searchHint.
   ///
@@ -146,17 +164,101 @@ abstract class AppLocalizations {
   /// **'Market value'**
   String get marketValue;
 
-  /// No description provided for @noRender.
+  /// No description provided for @notSpotted.
   ///
   /// In en, this message translates to:
-  /// **'No render yet'**
-  String get noRender;
+  /// **'Not spotted'**
+  String get notSpotted;
 
-  /// No description provided for @rarityCommon.
+  /// No description provided for @collection.
   ///
   /// In en, this message translates to:
-  /// **'COMMON'**
-  String get rarityCommon;
+  /// **'Collection'**
+  String get collection;
+
+  /// No description provided for @totalValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Total value'**
+  String get totalValue;
+
+  /// No description provided for @cars.
+  ///
+  /// In en, this message translates to:
+  /// **'Cars'**
+  String get cars;
+
+  /// No description provided for @sightings.
+  ///
+  /// In en, this message translates to:
+  /// **'Sightings'**
+  String get sightings;
+
+  /// No description provided for @catalogProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Of the catalog'**
+  String get catalogProgress;
+
+  /// No description provided for @rarityTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rarity'**
+  String get rarityTitle;
+
+  /// No description provided for @account.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get account;
+
+  /// No description provided for @currencyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Currency'**
+  String get currencyLabel;
+
+  /// No description provided for @ageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Age'**
+  String get ageLabel;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsTitle;
+
+  /// No description provided for @donate.
+  ///
+  /// In en, this message translates to:
+  /// **'Support Kerb'**
+  String get donate;
+
+  /// No description provided for @donateBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Kerb is free and ad-free. If you enjoy it, buy me a coffee.'**
+  String get donateBody;
+
+  /// No description provided for @memberSince.
+  ///
+  /// In en, this message translates to:
+  /// **'Member since'**
+  String get memberSince;
+
+  /// No description provided for @searchEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Search 500 cars'**
+  String get searchEmptyTitle;
+
+  /// No description provided for @searchEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Make, model or year. Works offline.'**
+  String get searchEmptyBody;
 
   /// No description provided for @rarityUncommon.
   ///
@@ -182,6 +284,12 @@ abstract class AppLocalizations {
   /// **'EPIC'**
   String get rarityEpic;
 
+  /// No description provided for @rarityMythic.
+  ///
+  /// In en, this message translates to:
+  /// **'MYTHIC'**
+  String get rarityMythic;
+
   /// No description provided for @rarityLegendary.
   ///
   /// In en, this message translates to:
@@ -203,14 +311,8 @@ abstract class AppLocalizations {
   /// No description provided for @filterAll.
   ///
   /// In en, this message translates to:
-  /// **'ALL'**
+  /// **'All'**
   String get filterAll;
-
-  /// No description provided for @searchTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Search'**
-  String get searchTitle;
 
   /// No description provided for @addManually.
   ///

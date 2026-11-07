@@ -38,7 +38,7 @@ void main() {
       'model': 'B',
       'year_from': 2000,
       'rarity_score': 12,
-      'rarity_tier': 'common',
+      'rarity_tier': 'uncommon',
     });
     expect(car.marketPriceEur, isNull);
     expect(car.powerHp, isNull);
@@ -47,5 +47,11 @@ void main() {
 
   test('una búsqueda sin resultados devuelve lista vacía, no null', () {
     expect(catalog.search('zzzzzz'), isEmpty);
+  });
+
+  test('el catálogo no contiene rutas de render ni de profundidad', () {
+    final raw = File('assets/catalog.json').readAsStringSync();
+    expect(raw, isNot(contains('render_path')));
+    expect(raw, isNot(contains('depth_path')));
   });
 }

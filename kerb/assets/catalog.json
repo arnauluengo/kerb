@@ -15,9 +15,7 @@
     "market_price_eur": 15000000,
     "rarity_score": 72.51,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "alfa-romeo-giulia-quadrifoglio-2016",
@@ -33,11 +31,9 @@
     "engine": "2.9 V6 biturbo",
     "production_units": null,
     "market_price_eur": 90000,
-    "rarity_score": 33.07,
+    "rarity_score": 32.7,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "alpine-a110-2017",
@@ -53,11 +49,9 @@
     "engine": "1.8 I4 turbo",
     "production_units": null,
     "market_price_eur": 60000,
-    "rarity_score": 20.97,
+    "rarity_score": 20.55,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "aston-martin-db5-1963",
@@ -73,11 +67,9 @@
     "engine": "4.0 I6",
     "production_units": 1021,
     "market_price_eur": 800000,
-    "rarity_score": 53.07,
+    "rarity_score": 53,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "aston-martin-v8-vantage-2005",
@@ -93,11 +85,9 @@
     "engine": "4.3 V8",
     "production_units": null,
     "market_price_eur": 60000,
-    "rarity_score": 39.52,
+    "rarity_score": 39.1,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "aston-martin-valkyrie-2021",
@@ -113,11 +103,9 @@
     "engine": "6.5 V12 híbrido",
     "production_units": 150,
     "market_price_eur": 3000000,
-    "rarity_score": 63.91,
+    "rarity_score": 63.89,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "audi-r8-v10-plus-2015",
@@ -133,11 +121,9 @@
     "engine": "5.2 V10",
     "production_units": null,
     "market_price_eur": 180000,
-    "rarity_score": 47.12,
+    "rarity_score": 46.88,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "audi-rs6-avant-c8-2019",
@@ -153,11 +139,9 @@
     "engine": "4.0 V8 biturbo",
     "production_units": null,
     "market_price_eur": 130000,
-    "rarity_score": 40.26,
+    "rarity_score": 40,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "audi-sport-quattro-1984",
@@ -173,11 +157,9 @@
     "engine": "2.1 I5 turbo",
     "production_units": 214,
     "market_price_eur": 350000,
-    "rarity_score": 57.35,
+    "rarity_score": 57.25,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "bmw-2002-turbo-1973",
@@ -193,11 +175,9 @@
     "engine": "2.0 I4 turbo",
     "production_units": 1672,
     "market_price_eur": 100000,
-    "rarity_score": 39.89,
+    "rarity_score": 39.69,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "bmw-m3-e30-1986",
@@ -213,11 +193,9 @@
     "engine": "2.3 I4",
     "production_units": 17970,
     "market_price_eur": 90000,
-    "rarity_score": 29.71,
+    "rarity_score": 29.49,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "bmw-m3-e46-2000",
@@ -233,11 +211,9 @@
     "engine": "3.2 I6",
     "production_units": 85744,
     "market_price_eur": 50000,
-    "rarity_score": 25.46,
+    "rarity_score": 25.2,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "bmw-m3-g80-2021",
@@ -253,11 +229,9 @@
     "engine": "3.0 I6 biturbo",
     "production_units": null,
     "market_price_eur": 100000,
-    "rarity_score": 29.99,
+    "rarity_score": 29.66,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "bmw-m5-e28-1985",
@@ -273,11 +247,9 @@
     "engine": "3.5 I6",
     "production_units": 2191,
     "market_price_eur": 80000,
-    "rarity_score": 38.29,
+    "rarity_score": 38.06,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "bugatti-chiron-2016",
@@ -293,11 +265,9 @@
     "engine": "8.0 W16 cuadriturbo",
     "production_units": 500,
     "market_price_eur": 3000000,
-    "rarity_score": 63.88,
+    "rarity_score": 63.85,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "bugatti-veyron-2005",
@@ -313,11 +283,9 @@
     "engine": "8.0 W16 cuadriturbo",
     "production_units": 450,
     "market_price_eur": 1900000,
-    "rarity_score": 67.93,
+    "rarity_score": 67.89,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "chevrolet-corvette-c2-stingray-1963",
@@ -333,11 +301,9 @@
     "engine": "5.4 V8",
     "production_units": null,
     "market_price_eur": 120000,
-    "rarity_score": 54.13,
+    "rarity_score": 53.84,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "chevrolet-corvette-c8-z06-2023",
@@ -353,11 +319,9 @@
     "engine": "5.5 V8",
     "production_units": null,
     "market_price_eur": 150000,
-    "rarity_score": 40.24,
+    "rarity_score": 39.98,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "citroen-2cv-1948",
@@ -375,9 +339,7 @@
     "market_price_eur": 12000,
     "rarity_score": 15.8,
     "rarity_tier": "uncommon",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "citroen-ds-19-1955",
@@ -393,11 +355,9 @@
     "engine": "1.9 I4",
     "production_units": null,
     "market_price_eur": 60000,
-    "rarity_score": 36.05,
+    "rarity_score": 35.63,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "dodge-charger-rt-1969",
@@ -413,11 +373,9 @@
     "engine": "7.2 V8",
     "production_units": null,
     "market_price_eur": 90000,
-    "rarity_score": 48.07,
+    "rarity_score": 47.7,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ferrari-250-gto-1962",
@@ -435,9 +393,7 @@
     "market_price_eur": 45000000,
     "rarity_score": 71.75,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ferrari-488-gtb-2015",
@@ -453,11 +409,9 @@
     "engine": "3.9 V8 biturbo",
     "production_units": null,
     "market_price_eur": 250000,
-    "rarity_score": 51.95,
+    "rarity_score": 51.75,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ferrari-f40-1987",
@@ -473,11 +427,9 @@
     "engine": "2.9 V8 biturbo",
     "production_units": 1311,
     "market_price_eur": 1200000,
-    "rarity_score": 56.36,
+    "rarity_score": 56.3,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ferrari-laferrari-2013",
@@ -493,11 +445,9 @@
     "engine": "6.3 V12 híbrido",
     "production_units": 499,
     "market_price_eur": 3500000,
-    "rarity_score": 62.82,
+    "rarity_score": 62.8,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "fiat-500-1957",
@@ -513,11 +463,9 @@
     "engine": "0.5 bóxer 2",
     "production_units": 3892944,
     "market_price_eur": 15000,
-    "rarity_score": 15.93,
+    "rarity_score": 15.94,
     "rarity_tier": "uncommon",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ford-escort-rs-cosworth-1992",
@@ -533,11 +481,9 @@
     "engine": "2.0 I4 turbo",
     "production_units": 7145,
     "market_price_eur": 90000,
-    "rarity_score": 33.57,
+    "rarity_score": 33.35,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ford-f150-raptor-r-2023",
@@ -553,11 +499,9 @@
     "engine": "5.2 V8 compresor",
     "production_units": null,
     "market_price_eur": 120000,
-    "rarity_score": 38.43,
+    "rarity_score": 38.14,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ford-gt-2017",
@@ -573,11 +517,9 @@
     "engine": "3.5 V6 biturbo",
     "production_units": 1350,
     "market_price_eur": 500000,
-    "rarity_score": 45.17,
+    "rarity_score": 45.09,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ford-model-t-1908",
@@ -593,11 +535,9 @@
     "engine": "2.9 I4",
     "production_units": 15000000,
     "market_price_eur": 30000,
-    "rarity_score": 18.18,
+    "rarity_score": 17.9,
     "rarity_tier": "uncommon",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "ford-mustang-shelby-gt500-2020",
@@ -613,11 +553,9 @@
     "engine": "5.2 V8 compresor",
     "production_units": null,
     "market_price_eur": 110000,
-    "rarity_score": 40.29,
+    "rarity_score": 39.99,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "honda-civic-type-r-fk8-2017",
@@ -633,11 +571,9 @@
     "engine": "2.0 I4 turbo",
     "production_units": null,
     "market_price_eur": 45000,
-    "rarity_score": 20.75,
+    "rarity_score": 20.3,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "honda-nsx-na1-1990",
@@ -653,11 +589,9 @@
     "engine": "3.0 V6",
     "production_units": 18817,
     "market_price_eur": 90000,
-    "rarity_score": 30.77,
+    "rarity_score": 30.55,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "jaguar-e-type-series-1-1961",
@@ -673,11 +607,9 @@
     "engine": "3.8 I6",
     "production_units": 38419,
     "market_price_eur": 200000,
-    "rarity_score": 34.95,
+    "rarity_score": 34.81,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "jaguar-f-type-r-2014",
@@ -693,11 +625,9 @@
     "engine": "5.0 V8 compresor",
     "production_units": null,
     "market_price_eur": 90000,
-    "rarity_score": 36.69,
+    "rarity_score": 36.31,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "jaguar-xj220-1992",
@@ -713,11 +643,9 @@
     "engine": "3.5 V6 biturbo",
     "production_units": 281,
     "market_price_eur": 500000,
-    "rarity_score": 61.23,
+    "rarity_score": 61.14,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "koenigsegg-agera-rs-2015",
@@ -733,11 +661,9 @@
     "engine": "5.0 V8 biturbo",
     "production_units": 25,
     "market_price_eur": 4000000,
-    "rarity_score": 75.98,
+    "rarity_score": 75.97,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "lamborghini-aventador-lp700-2011",
@@ -753,11 +679,9 @@
     "engine": "6.5 V12",
     "production_units": 11465,
     "market_price_eur": 400000,
-    "rarity_score": 42.33,
+    "rarity_score": 42.24,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "lamborghini-countach-lp400-1974",
@@ -773,11 +697,9 @@
     "engine": "4.0 V12",
     "production_units": 2042,
     "market_price_eur": 900000,
-    "rarity_score": 52.69,
+    "rarity_score": 52.62,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "lamborghini-huracan-lp610-2014",
@@ -793,11 +715,9 @@
     "engine": "5.2 V10",
     "production_units": 14022,
     "market_price_eur": 220000,
-    "rarity_score": 35.31,
+    "rarity_score": 35.18,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "lamborghini-miura-p400-1966",
@@ -813,11 +733,9 @@
     "engine": "3.9 V12",
     "production_units": 764,
     "market_price_eur": 1500000,
-    "rarity_score": 57.18,
+    "rarity_score": 57.12,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "lancia-delta-integrale-evo-ii-1993",
@@ -833,11 +751,9 @@
     "engine": "2.0 I4 turbo",
     "production_units": 4000,
     "market_price_eur": 150000,
-    "rarity_score": 40.9,
+    "rarity_score": 40.74,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "lancia-stratos-hf-1973",
@@ -853,11 +769,9 @@
     "engine": "2.4 V6",
     "production_units": 492,
     "market_price_eur": 600000,
-    "rarity_score": 53.92,
+    "rarity_score": 53.84,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mazda-mx-5-na-1989",
@@ -873,11 +787,9 @@
     "engine": "1.6 I4",
     "production_units": null,
     "market_price_eur": 15000,
-    "rarity_score": 29.28,
+    "rarity_score": 29.29,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mazda-rx-7-fd-1992",
@@ -893,11 +805,9 @@
     "engine": "1.3 biturbo rotativo",
     "production_units": null,
     "market_price_eur": 60000,
-    "rarity_score": 41.63,
+    "rarity_score": 41.21,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mclaren-720s-2017",
@@ -913,11 +823,9 @@
     "engine": "4.0 V8 biturbo",
     "production_units": null,
     "market_price_eur": 280000,
-    "rarity_score": 52.95,
+    "rarity_score": 52.78,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mclaren-f1-1992",
@@ -935,9 +843,7 @@
     "market_price_eur": 20000000,
     "rarity_score": 72.89,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mclaren-p1-2013",
@@ -953,11 +859,9 @@
     "engine": "3.8 V8 biturbo híbrido",
     "production_units": 375,
     "market_price_eur": 1800000,
-    "rarity_score": 60.87,
+    "rarity_score": 60.83,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mercedes-190e-evo-ii-1990",
@@ -973,11 +877,9 @@
     "engine": "2.5 I4",
     "production_units": 502,
     "market_price_eur": 250000,
-    "rarity_score": 51.43,
+    "rarity_score": 51.31,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mercedes-300-sl-gullwing-1954",
@@ -993,11 +895,9 @@
     "engine": "3.0 I6",
     "production_units": 1400,
     "market_price_eur": 1400000,
-    "rarity_score": 52.06,
+    "rarity_score": 51.99,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mercedes-amg-gt-black-series-2020",
@@ -1013,11 +913,9 @@
     "engine": "4.0 V8 biturbo",
     "production_units": 1700,
     "market_price_eur": 350000,
-    "rarity_score": 42.51,
+    "rarity_score": 42.4,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mercedes-g63-amg-2018",
@@ -1033,11 +931,9 @@
     "engine": "4.0 V8 biturbo",
     "production_units": null,
     "market_price_eur": 180000,
-    "rarity_score": 42.68,
+    "rarity_score": 42.44,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mini-cooper-s-1963",
@@ -1053,11 +949,9 @@
     "engine": "1.3 I4",
     "production_units": null,
     "market_price_eur": 35000,
-    "rarity_score": 32.22,
+    "rarity_score": 31.75,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "mitsubishi-lancer-evo-vi-tme-1999",
@@ -1073,11 +967,9 @@
     "engine": "2.0 I4 turbo",
     "production_units": 6000,
     "market_price_eur": 100000,
-    "rarity_score": 37,
+    "rarity_score": 36.8,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "nissan-gt-r-r35-2007",
@@ -1093,11 +985,9 @@
     "engine": "3.8 V6 biturbo",
     "production_units": null,
     "market_price_eur": 110000,
-    "rarity_score": 51.27,
+    "rarity_score": 50.96,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "nissan-skyline-gt-r-r34-1999",
@@ -1113,11 +1003,9 @@
     "engine": "2.6 I6 biturbo",
     "production_units": 11100,
     "market_price_eur": 120000,
-    "rarity_score": 36.62,
+    "rarity_score": 36.45,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "pagani-huayra-2012",
@@ -1133,11 +1021,9 @@
     "engine": "6.0 V12 biturbo",
     "production_units": 100,
     "market_price_eur": 2500000,
-    "rarity_score": 64.68,
+    "rarity_score": 64.65,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "pagani-zonda-c12-1999",
@@ -1153,11 +1039,9 @@
     "engine": "6.0 V12",
     "production_units": 140,
     "market_price_eur": 2000000,
-    "rarity_score": 65.45,
+    "rarity_score": 65.41,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "peugeot-205-gti-19-1986",
@@ -1173,11 +1057,9 @@
     "engine": "1.9 I4",
     "production_units": 332942,
     "market_price_eur": 25000,
-    "rarity_score": 19.38,
+    "rarity_score": 19.09,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "porsche-911-carrera-rs-27-1973",
@@ -1193,11 +1075,9 @@
     "engine": "2.7 bóxer 6",
     "production_units": 1580,
     "market_price_eur": 800000,
-    "rarity_score": 50.26,
+    "rarity_score": 50.18,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "porsche-911-gt3-991-2013",
@@ -1213,11 +1093,9 @@
     "engine": "3.8 bóxer 6",
     "production_units": null,
     "market_price_eur": 180000,
-    "rarity_score": 45.87,
+    "rarity_score": 45.63,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "porsche-911-gt3-rs-992-2022",
@@ -1233,11 +1111,9 @@
     "engine": "4.0 bóxer 6",
     "production_units": null,
     "market_price_eur": 260000,
-    "rarity_score": 42.01,
+    "rarity_score": 41.83,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "porsche-911-turbo-930-1975",
@@ -1253,11 +1129,9 @@
     "engine": "3.0 bóxer 6 turbo",
     "production_units": 21402,
     "market_price_eur": 250000,
-    "rarity_score": 37.98,
+    "rarity_score": 37.85,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "porsche-959-1986",
@@ -1273,11 +1147,9 @@
     "engine": "2.85 bóxer 6 biturbo",
     "production_units": 337,
     "market_price_eur": 1400000,
-    "rarity_score": 61.24,
+    "rarity_score": 61.18,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "porsche-carrera-gt-2004",
@@ -1293,11 +1165,9 @@
     "engine": "5.7 V10",
     "production_units": 1270,
     "market_price_eur": 1600000,
-    "rarity_score": 57.73,
+    "rarity_score": 57.68,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "renault-5-turbo-1980",
@@ -1313,11 +1183,9 @@
     "engine": "1.4 I4 turbo",
     "production_units": 4987,
     "market_price_eur": 120000,
-    "rarity_score": 37.58,
+    "rarity_score": 37.41,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "renault-clio-williams-1993",
@@ -1333,11 +1201,9 @@
     "engine": "2.0 I4",
     "production_units": 3800,
     "market_price_eur": 40000,
-    "rarity_score": 30.51,
+    "rarity_score": 30.23,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "renault-megane-rs-trophy-2018",
@@ -1353,11 +1219,9 @@
     "engine": "1.8 I4 turbo",
     "production_units": null,
     "market_price_eur": 40000,
-    "rarity_score": 17.89,
+    "rarity_score": 17.43,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "rimac-nevera-2021",
@@ -1373,11 +1237,9 @@
     "engine": "eléctrico tetramotor",
     "production_units": 150,
     "market_price_eur": 2200000,
-    "rarity_score": 63.94,
+    "rarity_score": 63.91,
     "rarity_tier": "legendary",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "seat-600-1957",
@@ -1395,29 +1257,7 @@
     "market_price_eur": 8000,
     "rarity_score": 15.48,
     "rarity_tier": "uncommon",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
-  },
-  {
-    "id": "seat-ibiza-fr-2017",
-    "make": "Seat",
-    "model": "Ibiza",
-    "generation": "FR 1.5 TSI",
-    "year_from": 2017,
-    "year_to": 2024,
-    "power_hp": 150,
-    "torque_nm": 250,
-    "zero_100": 8.2,
-    "top_speed_kmh": 215,
-    "engine": "1.5 I4 turbo",
-    "production_units": null,
-    "market_price_eur": 18000,
-    "rarity_score": 12.33,
-    "rarity_tier": "common",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "subaru-impreza-22b-1998",
@@ -1433,11 +1273,9 @@
     "engine": "2.2 bóxer 4 turbo",
     "production_units": 424,
     "market_price_eur": 200000,
-    "rarity_score": 51.86,
+    "rarity_score": 51.72,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "tesla-model-s-plaid-2021",
@@ -1453,11 +1291,9 @@
     "engine": "eléctrico trímotor",
     "production_units": null,
     "market_price_eur": 100000,
-    "rarity_score": 44.16,
+    "rarity_score": 43.82,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "toyota-land-cruiser-70-1984",
@@ -1473,11 +1309,9 @@
     "engine": "4.5 V8 diésel",
     "production_units": null,
     "market_price_eur": 45000,
-    "rarity_score": 37.55,
+    "rarity_score": 37.1,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "toyota-supra-a80-1993",
@@ -1493,11 +1327,9 @@
     "engine": "3.0 I6 biturbo",
     "production_units": 11263,
     "market_price_eur": 80000,
-    "rarity_score": 32.91,
+    "rarity_score": 32.67,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "toyota-supra-a90-2019",
@@ -1513,11 +1345,9 @@
     "engine": "3.0 I6 biturbo",
     "production_units": null,
     "market_price_eur": 60000,
-    "rarity_score": 20.91,
+    "rarity_score": 20.49,
     "rarity_tier": "very_rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "volkswagen-beetle-1938",
@@ -1533,11 +1363,9 @@
     "engine": "1.2 bóxer 4",
     "production_units": 21529464,
     "market_price_eur": 15000,
-    "rarity_score": 16.3,
+    "rarity_score": 16.31,
     "rarity_tier": "uncommon",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "volkswagen-golf-gti-mk1-1976",
@@ -1553,11 +1381,9 @@
     "engine": "1.6 I4",
     "production_units": 461690,
     "market_price_eur": 25000,
-    "rarity_score": 19.05,
+    "rarity_score": 18.76,
     "rarity_tier": "epic",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "volkswagen-golf-gti-mk2-1984",
@@ -1573,11 +1399,9 @@
     "engine": "1.8 I4",
     "production_units": null,
     "market_price_eur": 15000,
-    "rarity_score": 29.92,
+    "rarity_score": 29.93,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   },
   {
     "id": "volkswagen-golf-r-mk8-2021",
@@ -1593,10 +1417,8 @@
     "engine": "2.0 I4 turbo",
     "production_units": null,
     "market_price_eur": 55000,
-    "rarity_score": 17.33,
+    "rarity_score": 16.9,
     "rarity_tier": "rare",
-    "rarity_source": "curated",
-    "render_path": null,
-    "depth_path": null
+    "rarity_source": "curated"
   }
 ]

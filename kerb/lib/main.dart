@@ -1,0 +1,92 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:kerb/data/catalog.dart';
+import 'package:kerb/data/garage_repository.dart';
+import 'package:kerb/design/tokens.dart';
+import 'package:kerb/l10n/app_localizations.dart';
+import 'package:kerb/ui/shell/app_shell.dart';
+
+void main() => runApp(const KerbApp());
+
+class KerbApp extends StatelessWidget {
+  const KerbApp({super.key, this.locale, this.repository});
+
+  /// Locale forzado. En producción es `null` y manda el idioma del sistema.
+  final Locale? locale;
+
+  /// Garaje inyectado. Solo lo usa `dev_preview.dart` para enseñar la app con
+  /// datos sin tener que escanear nada.
+  final GarageRepository? repository;
+
+  @override
+  Widget build(BuildContext context) {
+    final repo = repository;
+
+    return MaterialApp(
+      title: 'Kerb',
+      debugShowCheckedModeBanner: false,
+      locale: locale,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: kBg,
+        colorScheme: const ColorScheme.dark(
+          primary: kGold,
+          surface: kSurface,
+        ),
+      ),
+      // En el navegador de escritorio la app se dibuja como un móvil. En un
+      // teléfono real este límite no se alcanza nunca.
+      builder: (context, child) => ColoredBox(
+        color: kBg,
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 430),
+            child: child!,
+          ),
+        ),
+      ),
+      home: repo == null ? const _BootHome() : AppShell(repository: repo),
+    );
+  }
+}
+
+/// Carga el catálogo embebido y monta el garaje.
+class _BootHome extends StatefulWidget {
+  const _BootHome();
+
+  @override
+  State<_BootHome> createState() => _BootHomeState();
+}
+
+class _BootHomeState extends State<_BootHome> {
+  GarageRepository? _repository;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    final source = await rootBundle.loadString('assets/catalog.json');
+    final catalog = Catalog.fromJsonString(source);
+    if (!mounted) return;
+    setState(() {
+      _repository = GarageRepository(catalog: catalog);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final repo = _repository;
+    if (repo == null) {
+      return const Scaffold(
+        backgroundColor: kBg,
+        body: Center(child: CircularProgressIndicator(color: kGold)),
+      );
+    }
+    return AppShell(repository: repo);
+  }
+}

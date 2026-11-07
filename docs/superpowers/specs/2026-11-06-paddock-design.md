@@ -1,7 +1,10 @@
 # Paddock — Documento de diseño
 
+> **SUSTITUIDO.** Este documento describe Paddock, la versión anterior del producto.
+> El diseño vigente es `2026-11-07-kerb-design.md`. Se conserva solo como histórico.
+
 **Fecha:** 2026-11-06
-**Estado:** aprobado en conversación, pendiente de revisión del builder
+**Estado:** obsoleto — sustituido por Kerb
 **Autor:** Arnau (producto) + agente (técnico)
 
 ---

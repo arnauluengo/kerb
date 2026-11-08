@@ -48,3 +48,5 @@ app.*.map.json
 
 # Fotos del catálogo descargadas de Unsplash: se suben a R2, no van al repo.
 /tools/catalog_photos/
+# Claves locales. Nunca al repo.
+tools/.env.local

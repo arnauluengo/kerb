@@ -1,6 +1,6 @@
 // Busca y descarga una foto de Unsplash para cada coche del catálogo.
 //
-//   $env:UNSPLASH_ACCESS_KEY = "tu-app-id"
+//   $env:UNSPLASH_ACCESS_KEY = "tu-app-id"      # o en tools/.env.local
 //   node tools/fetch_unsplash.mjs            # todas las que falten
 //   node tools/fetch_unsplash.mjs --demo     # key demo: 50 peticiones/hora
 //   node tools/fetch_unsplash.mjs --dry      # solo busca, no descarga
@@ -17,8 +17,20 @@ const root = join(here, '..');
 const RAW = join(here, 'cars_raw.json');
 const CACHE = join(here, 'unsplash_images.json');
 const PHOTOS = join(here, 'catalog_photos');
+const ENV = join(here, '.env.local');
 
-const accessKey = process.env.UNSPLASH_ACCESS_KEY;
+/// La key puede venir del entorno o de `tools/.env.local`, que está ignorado
+/// por git. Así no hace falta escribirla en un chat ni commitearla.
+function readEnvFile() {
+  if (!existsSync(ENV)) return null;
+  const line = readFileSync(ENV, 'utf8')
+    .split('\n')
+    .map((l) => l.trim())
+    .find((l) => l.startsWith('UNSPLASH_ACCESS_KEY='));
+  return line?.split('=').slice(1).join('=').trim().replace(/^["']|["']$/g, '') ?? null;
+}
+
+const accessKey = process.env.UNSPLASH_ACCESS_KEY ?? readEnvFile();
 const args = new Set(process.argv.slice(2));
 const demo = args.has('--demo');
 const dry = args.has('--dry');
@@ -27,8 +39,9 @@ const throttleMs = Number(process.env.UNSPLASH_THROTTLE_MS ?? (demo ? 75_000 : 1
 
 if (!accessKey) {
   console.error(
-    'Falta UNSPLASH_ACCESS_KEY. Crea una app en https://unsplash.com/developers ' +
-      'y ejecuta: $env:UNSPLASH_ACCESS_KEY="..."',
+    'Falta UNSPLASH_ACCESS_KEY. Crea una app en https://unsplash.com/developers y ' +
+      'ponla en el entorno o en kerb/tools/.env.local como ' +
+      'UNSPLASH_ACCESS_KEY=xxxx (ese archivo está ignorado por git).',
   );
   process.exit(1);
 }
@@ -123,9 +136,6 @@ for (const [carId, photoId] of Object.entries(picks)) {
 let done = 0;
 let missing = 0;
 
-for (const car of cars) {
-  if (cache[car.id]?.status === 'ok') continue;
-
 /// De más específica a más genérica. Un catálogo de coches raros suele tener
 /// resultados pobres: si no hay forma de clavar el modelo, se prefiere una foto
 /// de la marca antes que ninguna.
@@ -149,9 +159,6 @@ function pick(photos) {
   scored.sort((a, b) => b.score - a.score);
   return scored[0]?.p ?? null;
 }
-
-let done = 0;
-let missing = 0;
 
 for (const car of cars) {
   if (cache[car.id]?.status === 'ok') continue;

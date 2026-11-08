@@ -212,7 +212,7 @@ Feed global con amigos primero, likes y comentarios, amigos (usuario + QR), lead
 - **Cualquiera propone** un coche nuevo. Queda en `car_submissions` con estado `pending`. El dueño aprueba o rechaza desde el panel. Al aprobar, se crea la fila en `cars` y se recalcula la rareza.
 - Si un escaneo no coincide con nada del catálogo, la app lo dice explícitamente ("no hemos podido identificar este coche, dinos cuál es") y ofrece proponerlo. Nunca inventa.
 - El catálogo vive en el APK como JSON de respaldo y en Supabase como fuente de verdad. El buscador funciona sin internet.
-- **Sin fotos de catálogo.** Una carta que no tienes se muestra con silueta plana y el texto "sin avistar".
+- **Foto de catálogo solo para lo que no tienes.** Una carta que no has avistado se muestra con la foto curada de Unsplash del catálogo y el texto "sin avistar". Si no hay foto o no hay red, queda la silueta. Las cartas que sí tienes se muestran **siempre con tu foto**: la de Unsplash es la ausencia, nunca el sustituto de un avistamiento.
 
 ---
 
@@ -262,11 +262,12 @@ Feed global con amigos primero, likes y comentarios, amigos (usuario + QR), lead
 | Fotos por usuario | 1.000 | Contador en `profiles.photo_count` |
 | Subidas por usuario | 30/hora, 200/día | Rate limit en la Edge Function |
 | Tope global del bucket | **9,5 GB** | Comprobación antes de firmar + alerta a 8 GB |
+| Fotos del catálogo | ~0,1 GB reservados | Se suben desde `tools/`, no desde la app; cuentan en el tope pero nadie las sube |
 | Retención de huérfanas | Borrado a los 7 días | Cron diario |
 
 El tope global se comprueba contra la suma real de tamaños en `storage_usage`, que actualiza un cron cada hora consultando la API de R2. Si la suma supera 9,5 GB, la Edge Function responde `storage_full` y la app muestra: "El almacenamiento está lleno. Tus fotos siguen en tu móvil." **Ninguna subida puede generar un cargo**: si Cloudflare llegara a facturar algo, el sistema ya ha dejado de subir antes.
 
-**Rutas:** `users/<uuid>/<sighting-uuid>.webp`, no adivinables. Acceso por URL firmada de 5 minutos emitida por una Edge Function que comprueba permisos.
+**Rutas:** `users/<uuid>/<sighting-uuid>.webp`, no adivinables. Acceso por URL firmada de 5 minutos emitida por una Edge Function que comprueba permisos. Las fotos del catálogo viven en `catalog/<car-id>.webp`: son públicas, no llevan datos personales y se sirven con CDN, así que no necesitan firma.
 
 **Borrado de cuenta:** se borran perfil, entradas, avistamientos, fotos en R2, comentarios, likes, amistades y compras (salvo el registro contable que exige Stripe).
 
@@ -284,7 +285,7 @@ El tope global se comprueba contra la suma real de tamaños en `storage_usage`, 
 6. Marca en versalitas con tracking ancho; modelo en condensada grande, crema.
 7. Fila de datos: año · CV · unidades, en monoespaciada `#8C93A3`.
 8. Valor de mercado en verde, con etiqueta "valor 2026" y la moneda del perfil.
-9. Si la carta no tiene foto propia: silueta plana y "sin avistar".
+9. Si la carta no tiene foto propia: foto de Unsplash del catálogo con crédito del autor en la esquina, o silueta si no hay foto ni red, y el texto "sin avistar".
 
 **Colores de rareza**
 

@@ -51,6 +51,18 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
+  testWidgets('una carta sin avistar avisa y cae en la silueta si la foto falla',
+      (tester) async {
+    await tester.pumpWidget(
+      _wrap(const CarCard(car: carConFoto, currency: Currency.eur, spotted: false)),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('SIN AVISTAR'), findsOneWidget);
+    expect(find.byKey(const Key('card-render-placeholder')), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('el contador usa índice y total del catálogo', (tester) async {
     await tester.pumpWidget(
       _wrap(CarCard(car: f40, currency: Currency.eur, catalogIndex: 0, catalogTotal: 80)),

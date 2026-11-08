@@ -248,6 +248,12 @@ abstract class AppLocalizations {
   /// **'Member since'**
   String get memberSince;
 
+  /// No description provided for @guest.
+  ///
+  /// In en, this message translates to:
+  /// **'Guest'**
+  String get guest;
+
   /// No description provided for @searchEmptyTitle.
   ///
   /// In en, this message translates to:

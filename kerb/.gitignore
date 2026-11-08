@@ -1,6 +1,5 @@
 # Miscellaneous
-*.class
-*.log
+*.class*.log
 *.pyc
 *.swp
 .DS_Store
@@ -46,3 +45,6 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Fotos del catálogo descargadas de Unsplash: se suben a R2, no van al repo.
+/tools/catalog_photos/

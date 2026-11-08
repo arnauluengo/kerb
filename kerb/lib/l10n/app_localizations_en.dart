@@ -87,6 +87,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get memberSince => 'Member since';
 
   @override
+  String get guest => 'Guest';
+
+  @override
   String get searchEmptyTitle => 'Search 500 cars';
 
   @override

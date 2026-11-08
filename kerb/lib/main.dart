@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart';
 import 'package:kerb/data/catalog.dart';
 import 'package:kerb/data/garage_repository.dart';
 import 'package:kerb/design/tokens.dart';
 import 'package:kerb/l10n/app_localizations.dart';
 import 'package:kerb/ui/shell/app_shell.dart';
 
-void main() => runApp(const KerbApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
+      systemNavigationBarColor: KerbColors.navy,
+      systemNavigationBarIconBrightness: Brightness.light,
+    ),
+  );
+  runApp(const KerbApp());
+}
 
 class KerbApp extends StatelessWidget {
   const KerbApp({super.key, this.locale, this.repository});
@@ -28,26 +40,71 @@ class KerbApp extends StatelessWidget {
       locale: locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: kBg,
-        colorScheme: const ColorScheme.dark(
-          primary: kGold,
-          surface: kSurface,
-        ),
-      ),
+      theme: _theme(),
       // En el navegador de escritorio la app se dibuja como un móvil. En un
       // teléfono real este límite no se alcanza nunca.
       builder: (context, child) => ColoredBox(
-        color: kBg,
+        color: KerbColors.ink,
         child: Center(
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 430),
-            child: child!,
+            child: ClipRect(child: child!),
           ),
         ),
       ),
       home: repo == null ? const _BootHome() : AppShell(repository: repo),
+    );
+  }
+
+  static ThemeData _theme() {
+    const scheme = ColorScheme.dark(
+      primary: KerbColors.brick,
+      onPrimary: KerbColors.cream,
+      primaryContainer: KerbColors.brickWash,
+      onPrimaryContainer: KerbColors.cream,
+      secondary: KerbColors.value,
+      onSecondary: KerbColors.ink,
+      surface: KerbColors.asphalt,
+      onSurface: KerbColors.cream,
+      surfaceContainerHighest: KerbColors.raised,
+      outline: KerbColors.hairlineStrong,
+      error: KerbColors.brick,
+      onError: KerbColors.cream,
+    );
+
+    return ThemeData(
+      useMaterial3: true,
+      brightness: Brightness.dark,
+      fontFamily: KerbType.sans,
+      scaffoldBackgroundColor: KerbColors.navy,
+      canvasColor: KerbColors.navy,
+      colorScheme: scheme,
+      splashColor: KerbColors.brickWash,
+      highlightColor: Colors.transparent,
+      dividerColor: KerbColors.hairline,
+      textTheme: const TextTheme(
+        bodyLarge: KerbType.body,
+        bodyMedium: KerbType.body,
+        bodySmall: KerbType.bodyMuted,
+        titleLarge: KerbType.title,
+        titleMedium: KerbType.title,
+        labelLarge: KerbType.label,
+      ).apply(bodyColor: KerbColors.cream, displayColor: KerbColors.cream),
+      snackBarTheme: const SnackBarThemeData(
+        backgroundColor: KerbColors.raised,
+        contentTextStyle: TextStyle(
+          fontFamily: KerbType.sans,
+          fontSize: 13,
+          color: KerbColors.cream,
+        ),
+        behavior: SnackBarBehavior.floating,
+      ),
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.android: FadeForwardsPageTransitionsBuilder(),
+          TargetPlatform.iOS: FadeForwardsPageTransitionsBuilder(),
+        },
+      ),
     );
   }
 }
@@ -83,8 +140,13 @@ class _BootHomeState extends State<_BootHome> {
     final repo = _repository;
     if (repo == null) {
       return const Scaffold(
-        backgroundColor: kBg,
-        body: Center(child: CircularProgressIndicator(color: kGold)),
+        backgroundColor: KerbColors.navy,
+        body: Center(
+          child: CircularProgressIndicator(
+            color: KerbColors.brick,
+            strokeWidth: 2,
+          ),
+        ),
       );
     }
     return AppShell(repository: repo);

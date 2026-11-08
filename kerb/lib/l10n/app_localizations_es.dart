@@ -87,6 +87,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get memberSince => 'Miembro desde';
 
   @override
+  String get guest => 'Invitado';
+
+  @override
   String get searchEmptyTitle => 'Busca entre 500 coches';
 
   @override

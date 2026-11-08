@@ -17,6 +17,7 @@ class CarCard extends StatelessWidget {
     super.key,
     required this.car,
     required this.currency,
+    this.spotted = true,
     this.width = 286,
     this.catalogIndex,
     this.catalogTotal,
@@ -26,6 +27,10 @@ class CarCard extends StatelessWidget {
 
   final Car car;
   final Currency currency;
+
+  /// `false` cuando el coche aún no está en el garaje: la carta se enseña con
+  /// la foto de Unsplash del catálogo y el aviso de "sin avistar".
+  final bool spotted;
   final double width;
 
   /// Posición 0-based en el catálogo. Si es null, no se dibuja el contador.
@@ -133,6 +138,7 @@ class CarCard extends StatelessWidget {
                         car: car,
                         accent: accent,
                         scale: scale,
+                        spotted: spotted,
                       ),
                     ),
                     SizedBox(height: s(4)),
@@ -369,14 +375,22 @@ class _RenderArea extends StatelessWidget {
     required this.car,
     required this.accent,
     required this.scale,
+    required this.spotted,
   });
 
   final Car car;
   final Color accent;
   final double scale;
+  final bool spotted;
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
+    // Un coche avistado se enseña con SU foto (la del escaneo). Uno sin
+    // avistar usa la foto de Unsplash del catálogo; si no hay o no hay red,
+    // queda la silueta.
+    final photo = !spotted && car.imageUrl != null ? car.imageUrl : null;
+
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -394,14 +408,61 @@ class _RenderArea extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 6 * scale),
-          child: CarSilhouette(
-            key: const Key('card-render-placeholder'),
-            color: accent,
+        if (photo != null)
+          Positioned.fill(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 6 * scale),
+              child: Image.network(
+                photo,
+                fit: BoxFit.cover,
+                errorBuilder: (_, _, _) => _silhouette(),
+              ),
+            ),
+          )
+        else
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 6 * scale),
+            child: _silhouette(),
           ),
-        ),
+        if (photo != null)
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: EdgeInsets.only(left: 3, bottom: 18 * scale),
+              child: Text(
+                '© ${car.imageCredit ?? 'Unsplash'}',
+                style: TextStyle(
+                  fontFamily: KerbType.sans,
+                  fontSize: 7 * scale,
+                  color: KerbColors.cream.withValues(alpha: 0.55),
+                  shadows: const [Shadow(color: KerbColors.shadow, blurRadius: 6)],
+                ),
+              ),
+            ),
+          ),
+        if (!spotted)
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 4 * scale),
+              child: Text(
+                l.notSpotted.toUpperCase(),
+                style: TextStyle(
+                  fontFamily: KerbType.sans,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 8 * scale,
+                  letterSpacing: 1.6 * scale,
+                  color: KerbColors.cream.withValues(alpha: 0.65),
+                ),
+              ),
+            ),
+          ),
       ],
     );
   }
+
+  Widget _silhouette() => CarSilhouette(
+        key: const Key('card-render-placeholder'),
+        color: accent,
+      );
 }

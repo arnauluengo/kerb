@@ -1,7 +1,7 @@
 // Genera kerb/assets/catalog.json a partir de tools/cars_raw.json.
 // Calcula la rareza con la fórmula de la spec §13. Ejecutar:
 //   node tools/build_catalog.mjs
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -71,15 +71,26 @@ const scorePercentile = (score) => {
   return scores.length === 1 ? 1 : below / (scores.length - 1);
 };
 
+const images = existsSync(join(here, 'unsplash_images.json'))
+  ? JSON.parse(readFileSync(join(here, 'unsplash_images.json'), 'utf8'))
+  : {};
+
 const out = raw.map((car) => {
   const rawScore = rarity(car);
   const score = Number(rawScore.toFixed(2));
   const curatedTier = curated.get(car.id);
+  const image = images[car.id];
+  const spotted = image && image.status === 'ok' ? image : null;
+  const { render_path: _r, depth_path: _d, ...rest } = car;
   return {
-    ...car,
+    ...rest,
     rarity_score: score,
     rarity_tier: curatedTier ?? tierFromPercentile(scorePercentile(rawScore)),
     rarity_source: curatedTier ? 'curated' : 'formula',
+    // Solo para cartas sin avistar: la foto de Unsplash sustituye a la silueta.
+    image_url: spotted?.url ?? null,
+    image_credit: spotted?.credit ?? null,
+    image_page: spotted?.photoPage ?? null,
   };
 });
 

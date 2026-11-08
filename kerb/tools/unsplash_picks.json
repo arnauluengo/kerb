@@ -1,0 +1,4 @@
+{
+  "_nota": "Curación a mano: id de coche -> id de foto de Unsplash. `node tools/fetch_unsplash.mjs` resuelve estos primero (1 petición por coche, exacta) y luego busca por texto los que faltan. Para encontrar el id: abre la foto en unsplash.com y copia el final de la URL /photos/<id>.",
+  "_licencia": "Unsplash pide atribución al autor. El crédito viaja en el catálogo (image_credit / image_page) y se pinta en la propia carta."
+}

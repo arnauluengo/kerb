@@ -19,13 +19,27 @@ const f40 = Car(
 );
 
 const carSinPrecio = Car(
-  id: 'seat-ibiza-fr-2017',
-  make: 'Seat',
-  model: 'Ibiza',
-  generation: 'FR 1.5 TSI',
-  yearFrom: 2017,
+  id: 'lancia-delta-hf-1987',
+  make: 'Lancia',
+  model: 'Delta',
+  generation: 'HF Integrale',
+  yearFrom: 1987,
   powerHp: 150,
   topSpeedKmh: 215,
   rarityScore: 12,
   rarity: RarityTier.uncommon,
+);
+
+/// Coche con foto de Unsplash en el catálogo: así se ve una carta todavía no
+/// avistada.
+const carConFoto = Car(
+  id: 'porsche-911-carrera-1984',
+  make: 'Porsche',
+  model: '911',
+  generation: 'Carrera',
+  yearFrom: 1984,
+  rarityScore: 60,
+  rarity: RarityTier.epic,
+  imageUrl: 'https://images.unsplash.com/photo-fake?w=1000',
+  imageCredit: 'Fotógrafo',
 );

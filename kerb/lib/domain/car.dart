@@ -28,6 +28,9 @@ class Car {
     this.engine,
     this.productionUnits,
     this.marketPriceEur,
+    this.imageUrl,
+    this.imageCredit,
+    this.imagePage,
   });
 
   final String id;
@@ -45,6 +48,17 @@ class Car {
   final num? marketPriceEur;
   final double rarityScore;
   final RarityTier rarity;
+
+  /// Foto de Unsplash para las cartas de coches que aún no has avistado.
+  /// Null cuando el catálogo todavía no tiene imagen: la carta cae en la
+  /// silueta.
+  final String? imageUrl;
+
+  /// Nombre del fotógrafo. Unsplash pide atribución: no es opcional.
+  final String? imageCredit;
+
+  /// Página del autor en Unsplash, para enlazar la atribución.
+  final String? imagePage;
 
   /// Nombre completo para la carta: `911 GT3 RS 992`.
   String get fullName => generation == null ? model : '$model $generation';
@@ -71,6 +85,9 @@ class Car {
       marketPriceEur: json['market_price_eur'] as num?,
       rarityScore: (json['rarity_score'] as num).toDouble(),
       rarity: tier,
+      imageUrl: json['image_url'] as String?,
+      imagePage: json['image_page'] as String?,
+      imageCredit: json['image_credit'] as String?,
     );
   }
 }

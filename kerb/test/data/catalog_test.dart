@@ -54,4 +54,20 @@ void main() {
     expect(raw, isNot(contains('render_path')));
     expect(raw, isNot(contains('depth_path')));
   });
+
+  test('las fotos del catálogo son de Unsplash o no hay', () {
+    for (final car in catalog.all) {
+      expect(
+        car.imageUrl,
+        anyOf(
+          isNull,
+          predicate<String?>((u) => u!.startsWith('https://images.unsplash.com/')),
+        ),
+        reason: '${car.id} tiene una imagen de un origen no permitido',
+      );
+      if (car.imageUrl != null) {
+        expect(car.imageCredit, isNotNull, reason: '${car.id} sin atribución');
+      }
+    }
+  });
 }

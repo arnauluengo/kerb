@@ -27,7 +27,7 @@ void main() {
     );
   });
 
-  Future<void> _pump(
+  Future<void> pumpShell(
     WidgetTester tester,
     Size size, {
     int cars = 6,
@@ -44,7 +44,7 @@ void main() {
   for (final size in const [Size(320, 568), Size(393, 851), Size(430, 932)]) {
     testWidgets('el garaje cabe en ${size.width}x${size.height}',
         (tester) async {
-      await _pump(tester, size);
+      await pumpShell(tester, size);
 
       expect(find.byType(CarCard), findsAtLeastNWidgets(2));
       expect(find.text('06'), findsOneWidget);
@@ -52,7 +52,7 @@ void main() {
     });
 
     testWidgets('la barra inferior cabe en ${size.width} px', (tester) async {
-      await _pump(tester, size);
+      await pumpShell(tester, size);
 
       expect(find.byKey(const Key('scan-action')), findsOneWidget);
       expect(find.text('GARAJE'), findsOneWidget);
@@ -60,7 +60,7 @@ void main() {
     });
 
     testWidgets('buscar y perfil caben en ${size.width} px', (tester) async {
-      await _pump(tester, size);
+      await pumpShell(tester, size);
 
       await tester.tap(find.text('BUSCAR'));
       await tester.pumpAndSettle();
@@ -77,14 +77,14 @@ void main() {
   }
 
   testWidgets('el garaje vacío cabe en 320 px', (tester) async {
-    await _pump(tester, const Size(320, 568), cars: 0);
+    await pumpShell(tester, const Size(320, 568), cars: 0);
 
     expect(find.text('Escanear un coche'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
   testWidgets('añadir desde el buscador lleva al garaje', (tester) async {
-    await _pump(tester, const Size(393, 851), cars: 2);
+    await pumpShell(tester, const Size(393, 851), cars: 2);
     final before = repository.entries.length;
 
     await tester.tap(find.text('BUSCAR'));
